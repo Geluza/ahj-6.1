@@ -25,12 +25,6 @@ h3 {
   text-align: center;
 }
 
-.card {
-  width: 90%;
-  min-height: 50px;
-  margin-left: 10px;
-  margin-top: 20px;
-}
 
 .window_modal {
   position: absolute;
@@ -78,6 +72,13 @@ h3 {
    text-align: left;
    position: relative;
    min-height: 20px;
+   cursor: pointer;
+ }
+
+ .task.dragged {
+   position: absolute;
+   z-index: 999;
+   pointer-events: none;
  }
 
  .cross {
@@ -92,5 +93,5 @@ h3 {
 
  .list {
   list-style-type: none;
-  margin-right: 10%;
+  text-align: center
  }

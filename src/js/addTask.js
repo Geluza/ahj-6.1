@@ -1,6 +1,7 @@
 // TODO: write your code here
 //открываем окно с добавлением задачи
 //добавляем задачу в нужное окно и сохраняем в localStorage
+import printTask from './app'
 
 export default function addWrite() {
 const addTask = Array.from(document.getElementsByClassName("add_task"));
@@ -11,10 +12,10 @@ const modal = document.querySelectorAll(".window_modal");
 for(let i =0; i < addTask.length; i += 1) {
 addTask[i].addEventListener("click", (e)=> {
 e.preventDefault;
-const li = document.createElement("li");
-li.className = "task";
-li.innerHTML += `<span class="text">${textTask[i].value}</span><button type="button" class="cross">&#10007</button>`;
-lists[i].appendChild(li);
+if(textTask[i].value.trim() === "") {
+ alert("Невозможно сохранить пустую задачу!")
+ modal[i].style.display="none";
+} else {
 modal[i].style.display="none";
 const colName = document.querySelectorAll(".column_title")[i];
 if(localStorage.getItem(colName.textContent)) {
@@ -27,13 +28,17 @@ const tasks = textTask[i].value;
 arrTasks.push(tasks);
 localStorage.setItem(colName.textContent, JSON.stringify(arrTasks));
 }
-})
+location.reload()
+}})
 }
 }
 
 
 
-
+//const li = document.createElement("li");
+//li.className = "task";
+//li.innerHTML += `<span class="text">${textTask[i].value}</span><button type="button" class="cross">&#10007</button>`;
+//lists[i].appendChild(li);
 
 
 

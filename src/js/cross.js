@@ -18,18 +18,13 @@ vidget[i].addEventListener("mouseleave", (e) => {
 }
 }
 
-//удаление задачи при нажатии на крестик
-export function removeTask() {
-  for(let i = 0; i < vidget.length; i += 1) {
-  vidget[i].addEventListener("click", (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains("cross")) {
-    const colName = Array.from(document.querySelectorAll(".column_title"))[i];
-    const arrayEdit = JSON.parse(localStorage.getItem(colName.textContent));
-    const textTask = e.target.previousSibling.textContent;
-    const numForDelete = arrayEdit.indexOf(textTask);
-    arrayEdit.splice(numForDelete, 1);
-    localStorage.setItem(colName.textContent, arrayEdit);
-    }
-  });
-}}
+
+
+    //const colName = document.querySelectorAll(".column_title");
+    //for(let i = 0; i < colName.length; i += 1) {
+    //const arrayEdit = JSON.parse(localStorage.getItem(colName[i].textContent));
+    //const textTask = e.target.previousSibling.textContent;
+    //const numForDelete = arrayEdit.indexOf(textTask);
+    //arrayEdit.splice(numForDelete, 1);
+    //localStorage[colName.textContent] = JSON.stringify(arrayEdit);}
+    //
