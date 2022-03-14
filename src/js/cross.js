@@ -1,30 +1,28 @@
 // TODO: write your code here
-//появление крестика при наведении на задачу
-const vidget = Array.from(document.getElementsByClassName("vidget"));
+// появление крестика при наведении на задачу
+const vidget = Array.from(document.getElementsByClassName('vidget'));
 export default function addCross() {
-for(let i = 0; i < vidget.length; i += 1) {
-vidget[i].addEventListener("mouseover", (e) => {
-  e.preventDefault();
-  if(e.target.classList.contains("task")) {
-    e.target.querySelector(".cross").style.display = "block";
+  for (let i = 0; i < vidget.length; i += 1) {
+    vidget[i].addEventListener('mouseover', (e) => {
+      e.preventDefault();
+      if (e.target.classList.contains('task')) {
+        e.target.querySelector('.cross').style.display = 'block';
+      }
+    });
+    vidget[i].addEventListener('mouseleave', (e) => {
+      e.preventDefault();
+      if (e.target.classList.contains('task')) {
+        e.target.querySelector('.cross').style.display = 'none';
+      }
+    });
   }
-});
-vidget[i].addEventListener("mouseleave", (e) => {
-    e.preventDefault();
-    if(e.target.classList.contains("task")) {
-      e.target.querySelector(".cross").style.display = "none";
-    }
-  });
-}
 }
 
-
-
-    //const colName = document.querySelectorAll(".column_title");
-    //for(let i = 0; i < colName.length; i += 1) {
-    //const arrayEdit = JSON.parse(localStorage.getItem(colName[i].textContent));
-    //const textTask = e.target.previousSibling.textContent;
-    //const numForDelete = arrayEdit.indexOf(textTask);
-    //arrayEdit.splice(numForDelete, 1);
-    //localStorage[colName.textContent] = JSON.stringify(arrayEdit);}
-    //
+// const colName = document.querySelectorAll(".column_title");
+// for(let i = 0; i < colName.length; i += 1) {
+// const arrayEdit = JSON.parse(localStorage.getItem(colName[i].textContent));
+// const textTask = e.target.previousSibling.textContent;
+// const numForDelete = arrayEdit.indexOf(textTask);
+// arrayEdit.splice(numForDelete, 1);
+// localStorage[colName.textContent] = JSON.stringify(arrayEdit);}
+//
