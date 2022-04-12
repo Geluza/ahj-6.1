@@ -18,11 +18,5 @@ export default function addCross() {
   }
 }
 
-// const colName = document.querySelectorAll(".column_title");
-// for(let i = 0; i < colName.length; i += 1) {
-// const arrayEdit = JSON.parse(localStorage.getItem(colName[i].textContent));
-// const textTask = e.target.previousSibling.textContent;
-// const numForDelete = arrayEdit.indexOf(textTask);
-// arrayEdit.splice(numForDelete, 1);
-// localStorage[colName.textContent] = JSON.stringify(arrayEdit);}
-//
+
+

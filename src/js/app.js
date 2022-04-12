@@ -11,14 +11,14 @@ addWrite();
 addCross();
 dragAndDrop();
 
-export default function printTask(columnName, listName) {
+ function printTask(columnName, listName) {
   const getStorage = JSON.parse(localStorage.getItem(columnName));
   if (getStorage) {
     getStorage.forEach((elem) => {
       const taskForPrint = document.createElement('li');
       taskForPrint.className = 'task';
       taskForPrint.innerHTML += `<span class="text">${elem}</span><button type="button" class="cross">&#10007</button>`;
-      document.getElementById(listName).appendChild(taskForPrint);
+      document.getElementsByClassName(listName)[0].appendChild(taskForPrint);
 
       taskForPrint.querySelector('.cross').addEventListener('click', (e) => {
         e.preventDefault();

@@ -1,14 +1,15 @@
+
+
 #vidgets {
   display: flex;
   justify-content: space-evenly;
-  position: relative;
   list-style-type: none;
 }
 .vidget {
   border: solid black;
   background-color: #c0c0c0;
   width: 31%;
-  min-height: 250px;
+
 }
 
 h3 {
@@ -70,21 +71,20 @@ h3 {
    background-color: white;
    margin-top: 15px;
    text-align: left;
-   position: relative;
    min-height: 20px;
    cursor: pointer;
+   display: flex;
+   justify-content: space-between;
  }
 
  .task.dragged {
    position: absolute;
    z-index: 999;
    pointer-events: none;
+   background: #fff;
  }
 
  .cross {
-   position: absolute;
-   top: 0px;
-   right: 0px;
    color: red;
    border: none;
    background-color: white;
@@ -93,5 +93,5 @@ h3 {
 
  .list {
   list-style-type: none;
-  text-align: center
+  padding-left: 0;
  }
