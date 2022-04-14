@@ -1,12 +1,10 @@
 // TODO: write your code here
 import addWrite from './addTask';
 import addCross from './cross';
-import openModal from './Modal';
-import closeModal from './Modal';
+import Modal from './Modal';
 import dragAndDrop from './dragAndDrop';
 
-openModal();
-closeModal();
+Modal();
 addWrite();
 addCross();
 dragAndDrop();
