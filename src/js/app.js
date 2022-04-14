@@ -9,7 +9,7 @@ addWrite();
 addCross();
 dragAndDrop();
 
- function printTask(columnName, listName) {
+function printTask(columnName, listName) {
   const getStorage = JSON.parse(localStorage.getItem(columnName));
   if (getStorage) {
     getStorage.forEach((elem) => {
